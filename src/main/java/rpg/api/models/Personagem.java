@@ -1,4 +1,4 @@
-package rpg.api.controllers;
+package rpg.api.models;
 
 
 import jakarta.persistence.Entity;
@@ -14,6 +14,7 @@ public class Personagem {
     private int hpMaximo;
     private int hpAtual;
 
+    private int qtdDadoHpAtual;
 
 
 }
