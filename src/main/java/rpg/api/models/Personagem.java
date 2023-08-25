@@ -8,13 +8,15 @@ import org.springframework.data.annotation.Id;
 public class Personagem {
     @Id
     private Long id;
-
     private String nome;
-
     private int hpMaximo;
     private int hpAtual;
-
     private int qtdDadoHpAtual;
+    // outras tabelas
+    private int idClasse;
+    private int idRaca;
+    private int idUsuario;
+    private int idMochila;
 
 
 }
