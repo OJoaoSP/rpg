@@ -1,8 +1,10 @@
 package rpg.api.models;
 
+import jakarta.persistence.Embeddable;
 import lombok.Getter;
 
 @Getter
+@Embeddable
 public class Status {
 
     private int Forca;
@@ -12,8 +14,8 @@ public class Status {
     private int Sabedoria;
     private int Carisma;
 
-    public int getModificaFor(){
-        return Math.floorDiv((this.getForca() - 10), 2);
+    public int getModificador(int Atributo){
+        return Math.floorDiv((Atributo - 10), 2);
     }
 
 
