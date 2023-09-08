@@ -14,7 +14,7 @@ import java.util.Collection;
 import java.util.List;
 
 @Table(name = "usuarios")
-@Entity(name = "Usuario")
+@Entity(name = "usuarios")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -53,7 +53,7 @@ public class Usuario implements UserDetails {
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     @Override

@@ -1,6 +1,7 @@
 package rpg.api.models.dto;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
+import jakarta.validation.constraints.NotNull;
 
 public record dtoCriaPersonagem(
         int nivel,
@@ -10,6 +11,8 @@ public record dtoCriaPersonagem(
         @JsonAlias("classe")
         int idClasse,
         @JsonAlias("raca")
-        int idRaca
+        int idRaca,
+        @NotNull
+        Long usuarioId
 ) {
 }

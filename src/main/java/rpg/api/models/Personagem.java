@@ -15,9 +15,10 @@ import rpg.api.models.dto.dtoCriaPersonagem;
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class Personagem {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nome;
     private int nivel;
     private int hpMaximo;
@@ -26,7 +27,7 @@ public class Personagem {
     // outras tabelas
     private int idClasse;
     private int idRaca;
-    private int idUsuario;
+    private Long idUsuario;
 
 
     public Personagem(dtoCriaPersonagem dados) {
@@ -36,5 +37,7 @@ public class Personagem {
         this.hpAtual = dados.hpMaximo();
         this.idClasse = dados.idClasse();
         this.idRaca = dados.idRaca();
+        this.idUsuario = dados.usuarioId();
     }
 }
+
