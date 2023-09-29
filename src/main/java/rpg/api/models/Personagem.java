@@ -26,9 +26,8 @@ public class Personagem {
     private int qtdDadoHpAtual;
     // outras tabelas
     private int idClasse;
-    private int idRaca;
+    private Long idRaca;
     private Long idUsuario;
-
 
     public Personagem(dtoCriaPersonagem dados) {
         this.nome = dados.nome();

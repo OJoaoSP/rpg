@@ -11,7 +11,7 @@ public record dtoCriaPersonagem(
         @JsonAlias("classe")
         int idClasse,
         @JsonAlias("raca")
-        int idRaca,
+        Long idRaca,
         @NotNull
         Long usuarioId
 ) {

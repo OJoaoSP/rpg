@@ -10,7 +10,7 @@ public record dadosDetalhesPersonagem(
         int hpMaximo,
         int hpAtual,
         int idClasse,
-        int idRaca,
+        Long idRaca,
         Long idUsuario) {
     public dadosDetalhesPersonagem(Personagem pp) {
         this( pp.getId(),pp.getNivel(), pp.getNome(), pp.getHpMaximo(),pp.getHpAtual(),
